@@ -8,9 +8,7 @@
 #include <stdio.h>
 #include "add.h"
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv) {
   printf("6 + 23 = %d\n", Add(6, 23));
-
   return EXIT_SUCCESS;
 }
