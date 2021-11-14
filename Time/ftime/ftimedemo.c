@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <sys\timeb.h> 
+#include <time.h> 
 
 /*
   https://pubs.opengroup.org/onlinepubs/009604499/functions/ftime.html
@@ -51,5 +51,6 @@ int main() {
                      + (end.millitm - start.millitm);
 
   printf("\nOperation took %u milliseconds\n", diff);
+  printf("\nFinal value: %u\n", dest);
   return 0;
 }

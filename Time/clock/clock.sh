@@ -20,7 +20,7 @@ trap cleanup_ERR ERR
 
 
 main() {
-  readonly SOURCE="timebdemo"
+  readonly SOURCE="clockdemo"
   if [[ "${MSYSTEM}" == "MINGW64" ]]; then
     readonly ARCH="x64"
   else
@@ -34,7 +34,7 @@ main() {
       -DVOLATILE_DEST="volatile" \
       -DVOLATILE_LOOP_COUNTER="volatile" \
       -o ${SOURCE}_pp.c
-  gcc -O3 ${SOURCE}_pp.c -o ${SOURCE}.exe
+  gcc -O3 -Wall ${SOURCE}_pp.c -o ${SOURCE}.exe
   mv ${SOURCE}.exe "./${ARCH}"
   mv ${SOURCE}_pp.c "./${ARCH}"
 
